@@ -103,8 +103,7 @@ function App() {
   let checkUpdate = (id,value)=>{
     // console.log(id,value)
     console.log('checkUpdate 실행')
-    let newTodos = todo
-    map(item=> item.id === id ? {...item, checked:value} : item);
+    let newTodos = todo.map(item=> item.id === id ? {...item, checked:value} : item);
     
     setTodo(newTodos);
   }
